@@ -1,0 +1,320 @@
+/* Estilos generales */
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+  font-family: 'Big Shoulders Display', cursive;
+    margin: 0;
+    padding: 0;
+  }
+  
+/* Estilos del encabezado */
+header {
+  background: linear-gradient(to bottom, rgb(10, 10, 10) 40%, rgb(35, 26, 39) 50%, rgba(10, 10, 10) 60%);
+  position: relative;
+  color: #fff;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-banner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding:0;
+}
+
+/* Titulo */
+
+.gst{
+  font-size: 360px;
+  margin: 0;
+  padding: 0;
+  color: rgb(250, 220, 255);
+  text-shadow: 0 4px 10px #691e75;
+}
+
+.webdesign{
+  font-size: 95px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  bottom: 70px;
+  color: rgb(255, 188, 190);
+  text-shadow: 0 4px 10px #c30000;
+}
+
+
+/* Efecto estrellas */
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  box-shadow: 150px 100px #fff, 230px 200px #fff, 550px 200px #fff, 600px 350px #fff, 120px 400px #fff, 800px 250px #fff, 950px 450px #fff, 1000px 150px #fff, 1300px 350px #fff, 1400px 250px #fff, 1600px 400px #fff;
+  background-color: transparent;
+  animation: starAnimation 1.45s infinite;
+  opacity: 0;
+}
+
+.star:nth-child(1) {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  box-shadow: 250px 250px #f5b5ff, 330px 350px #f5b5ff, 650px 250px #f5b5ff, 700px 550px #f5b5ff, 420px 630px #f5b5ff, 900px 350px #f5b5ff, 1050px 350px #f5b5ff, 1100px 350px #f5b5ff, 1400px 380px #f5b5ff, 1500px 450px #f5b5ff, 1800px 600px #f5b5ff;
+  background-color: transparent;
+  animation: starAnimation 2.665s infinite;
+  opacity: 0;
+}
+
+.star:nth-child(2) {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  box-shadow: 50px 150px #96efff, 130px 850px #96efff, 850px 650px #96efff, 900px 250px #96efff, 580px 630px #96efff, 800px 150px #96efff, 1550px 350px #96efff, 1200px 50px #96efff, 1450px 180px #96efff, 1700px 550px #96efff, 1100px 800px #96efff;
+  background-color: transparent;
+  animation: starAnimation 3.7426s infinite;
+  opacity: 0;
+}
+
+.star::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+@keyframes starAnimation {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+}
+
+/* Menu */
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding-top: 20px;
+    padding-left: 30px;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s;
+    padding: 0 10px 0 5px;
+  }
+
+  nav ul li a:hover {
+    color: rgb(76, 219, 255);
+    text-decoration: underline;
+    text-shadow: 0 4px 10px rgb(255, 255, 255, 0.7);
+  }
+  /* Estilos del Body */
+
+  .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    display: none;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    padding: 10px 15px;
+    border-radius: 50%;
+    z-index: 999;
+  }
+  
+  .scroll-to-top:hover {
+    background-color: #555;
+  }
+  
+  .scroll-to-top.show {
+    display: block;
+  }
+
+  .section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px); /* 100px es la altura del header */
+  }
+  
+  /* Estilos de la sección de proyectos */
+  #proyectos {
+    background-color: #121212;
+    padding: 40px;
+  }
+  
+  .proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .proyecto {
+    background-color: #1500ff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3);
+  }
+  
+  h2 {
+    color: wheat
+  }
+  
+  .proyecto img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .proyecto h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .proyecto h3::after {
+    content: "_";
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: blink 1s infinite steps(1);
+    width: 10px;
+  }
+  
+  @keyframes blink {
+    0%, 50% {
+      opacity: 1;
+    }
+    51%, 100% {
+      opacity: 0;
+    }
+  }
+  
+  .proyecto p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: white;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .proyecto a {
+    display: block;
+    color: cyan;
+    text-decoration: none;
+  }
+  
+  /* Estilos de la sección de Quienes somos */
+  #quienes-somos {
+    background-color: rgba(10, 10, 10);
+    padding: 40px;
+  }
+  
+  .members {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .seba {
+    flex-basis: 48%;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .seba img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .seba h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: rgb(233, 192, 255);
+  }
+  
+  .seba p,
+  .lucas p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .seba a,
+  .lucas a {
+    display: block;
+    color: magenta;
+    text-decoration: none;
+  }
+  
+  /* Estilos del formulario de contacto */
+  #contacto {
+    background-color: #121212;
+    padding: 40px;
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  form button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Estilos del pie de página */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
