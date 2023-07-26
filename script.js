@@ -1,4 +1,28 @@
-
+// tipeo de "web design"
+        document.addEventListener('DOMContentLoaded', function() {
+          var element = document.querySelector('.webdesign'); // Obtén el elemento donde se mostrará el texto
+  
+          var text = 'Web Design-'; // Texto que se mostrará
+          var speed =250; // Velocidad de tipeo en milisegundos por carácter
+  
+          var index = 0; // Índice para rastrear el carácter actual
+          var timer;
+  
+          // Función para agregar un carácter al texto
+          function addChar() {
+            element.textContent = text.slice(0, index); // Actualiza el contenido con el texto parcial
+            element.innerHTML += '<span class="cursor">|</span>'; // Agrega el cursor de tipeo
+  
+            index++;
+  
+            if (index < text.length) {
+              timer = setTimeout(addChar, speed); // Espera la velocidad de tipeo antes de agregar el siguiente carácter
+            }
+          }
+  
+          // Comienza el efecto de tipeo
+          addChar();
+        });
 
 // flecha de scroll to top
 
