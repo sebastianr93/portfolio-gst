@@ -1,0 +1,469 @@
+/* Estilos generales */
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+  font-family: 'Big Shoulders Display', cursive;
+    margin: 0;
+    padding: 0;
+  }
+  
+/* Estilos del encabezado */
+header {
+  position: relative;
+  color: #fff;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-banner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding:0;
+}
+
+/* Titulo */
+
+.gst{
+  font-size: 360px;
+  margin: 0;
+  padding: 0;
+  color: rgb(240, 179, 251);
+  text-shadow: 0 4px 10px #af00f4;
+}
+
+.webdesign{
+  font-size: 95px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  bottom: 70px;
+  color: rgb(147, 210, 255);
+  text-shadow: 0 4px 10px #00f7ff;
+}
+
+/* Fondo animado */
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, rgb(38, 86, 99) 50%, rgb(44, 34, 52) 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+/* Menu */
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding-top: 20px;
+    padding-left: 30px;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s;
+    padding: 0 10px 0 5px;
+  }
+
+  nav ul li a:hover {
+    color: rgb(76, 219, 255);
+    text-decoration: underline;
+    text-shadow: 0 4px 10px rgb(255, 255, 255, 0.7);
+  }
+  /* Estilos del Body */
+
+  .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    display: none;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    padding: 10px 15px;
+    border-radius: 50%;
+    z-index: 999;
+  }
+  
+  .scroll-to-top:hover {
+    background-color: #555;
+  }
+  
+  .scroll-to-top.show {
+    display: block;
+  }
+
+  .section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px); /* 100px es la altura del header */
+  }
+
+  h2 {
+    color: #f3bdfb;
+    text-shadow: 0 4px 10px #691e75;
+  }
+
+   /* Estilos de la sección de proyectos */
+
+  
+   #proyectos {
+    background: rgb(12, 12, 12);
+    padding: 40px;
+    animation: cambiaColor 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+    overflow: hidden;
+    background-image: url(media/fondoport.jpg);
+  }
+
+  #proyectos h2 {
+   font-size: 80px;
+  }
+  
+  .proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .proyecto {
+    height: fit-content;
+    background: #080808;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #691e75;
+    position: relative;
+    overflow: hidden;
+    transition: 0.2s;
+  }
+
+  .proyecto:hover {
+    background-color: #c1f7ff;
+  }
+  
+  .proyecto h3 {
+    margin: 0;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: rgb(76, 219, 255);
+    text-shadow: 0 1px 5px rgb(255, 255, 255, 0.4);
+    position: relative;
+    display: inline-block;
+  }
+
+  .proyecto-img {
+    width: 16em;
+    height: 9em;
+    max-width: 100%;
+    margin-bottom: 10px;
+    object-fit: cover;
+  }
+  
+
+.proyecto-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+  
+  .proyecto p {
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: rgb(25, 19, 68);
+    display: block;
+  }
+  
+  .proyecto a {
+    padding-top: 10%;
+    display: block;
+    color: rgb(84, 0, 99);
+    text-decoration:underline
+  }
+  
+  /* Estilos de la sección de Quienes somos */
+
+  .area{
+    background: #535289;
+    width: 100%;
+    height:100vh;
+   
+   
+}
+
+.circles{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+  
+  .members {
+    width: 50%;
+    height: auto;
+    display: flex;
+  }
+  
+  .seba {
+    flex-basis: 48%;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .seba img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .seba h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: rgb(233, 192, 255);
+  }
+  
+  .seba p,
+  .lucas p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .seba a,
+  .lucas a {
+    display: block;
+    color: magenta;
+    text-decoration: none;
+  }
+  
+  /* Estilos del formulario de contacto */
+  #contacto {
+    padding: 40px;
+  }
+
+  #contacto h2 {
+    font-size: 80px;
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  form button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  form button:hover {
+    background-color: #161616;
+    color: #00eeff;
+    box-shadow: 0 2px 5px rgb(0, 255, 238);
+    transform: scale(1.3);
+  }
+  
+  /* Estilos del pie de página */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+  }
+  
+
+  /************************** estilos lucas ****************************************/
+  .quienesh2{
+    font-size: 60px;
+    text-align: center;
+  }
+  .textoquienes{
+   font-size: 40px;
+   color: #2fe2ee;
+   text-shadow: 0 4px 10px #08a7a2;
+
+  }
+
+  .cursor {
+    display: inline-block;
+    width: 2px;
+    height: 25px;
+    animation: parpadear 1s infinite;
+}
+
+/* Animación para el parpadeo del cursor */
+@keyframes parpadear {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.contenido{
+  content: "</>";
+}
+
