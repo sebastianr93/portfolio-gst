@@ -145,37 +145,78 @@ header {
 
    /* Estilos de la sección de proyectos */
 
+   /* Slider */
+
+   .slider {
+    display: flex;
+    justify-content: center;
+  }
   
+.slider div {
+    text-align: center;
+    margin: 0 10px;
+}
+
+.slider div img {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: fit-content;
+    object-fit: cover;
+}
+
+.slider div p {
+    text-align: justify;
+    margin: 0 120px;
+}
+
+.slick-prev,
+.slick-next {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+
+.slick-prev img,
+.slick-next img {
+  width: 60px;
+  height: 60px;
+}
+
+.slick-prev {
+  left: 10px; 
+}
+
+.slick-next {
+  right: 10px; 
+}
+
+ 
    #proyectos {
-    background: rgb(12, 12, 12);
     padding: 40px;
-    animation: cambiaColor 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
-    overflow: hidden;
+    background-image: url(media/fondoport.jpg);
   }
 
   #proyectos h2 {
    font-size: 80px;
   }
   
-  .proyectos-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-  }
-  
   .proyecto {
-    height: fit-content;
+    width: 800px;
+    height: 600px;
     background: #080808;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px #691e75;
     position: relative;
     overflow: hidden;
-    transition: 0.2s;
-  }
-
-  .proyecto:hover {
-    background-color: #c1f7ff;
   }
   
   .proyecto h3 {
@@ -196,16 +237,6 @@ header {
     object-fit: cover;
   }
   
-
-.proyecto-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-  
   .proyecto p {
     font-size: 25px;
     margin-bottom: 10px;
@@ -218,7 +249,7 @@ header {
     display: block;
     color: rgb(84, 0, 99);
     text-decoration:underline
-  }
+  } 
   
   /* Estilos de la sección de Quienes somos */
 
@@ -428,4 +459,42 @@ header {
     font-size: 30px;
     padding: 20px;
   }
+
+
+  /*   lucas */
+
+  .quienesh2{
+    font-size: 60px;
+    text-align: center;
+  }
+  .textoquienes{
+   font-size: 40px;
+   color: #2fe2ee;
+   text-shadow: 0 4px 10px #08a7a2;
+
+  }
+
+  .cursor {
+    display: inline-block;
+    width: 2px;
+    height: 25px;
+    animation: parpadear 1s infinite;
+}
+
+/* Animación para el parpadeo del cursor */
+@keyframes parpadear {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.contenido{
+  content: "</>";
+}
   

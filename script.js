@@ -24,6 +24,16 @@
           addChar();
         });
 
+
+  // Slider de proyectos
+
+  $(document).ready(function() {
+    $('.slider').slick({
+      prevArrow: '<button type="button" class="slick-prev"><img src="media/previous.png" alt="Previous"></button>',
+      nextArrow: '<button type="button" class="slick-next"><img src="media/next.png" alt="Next"></button>'
+    });
+  });
+
 // flecha de scroll to top
 
   $(document).ready(function() {
@@ -65,4 +75,6 @@
       }
     });
   });
+
+
 
